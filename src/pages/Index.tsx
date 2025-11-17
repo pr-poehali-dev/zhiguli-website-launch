@@ -2,6 +2,13 @@ import { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Icon from '@/components/ui/icon';
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from '@/components/ui/dialog';
 
 const carModels = [
   {
@@ -35,11 +42,16 @@ const galleryImages = [
 
 export default function Index() {
   const [activeSection, setActiveSection] = useState('home');
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   const scrollToSection = (section: string) => {
     setActiveSection(section);
     const element = document.getElementById(section);
     element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const handleDetailsClick = () => {
+    setDialogOpen(true);
   };
 
   return (
@@ -118,7 +130,7 @@ export default function Index() {
                     <span className="text-2xl font-bold text-primary">
                       {car.price}
                     </span>
-                    <Button className="bg-primary hover:bg-primary/90">
+                    <Button onClick={handleDetailsClick} className="bg-primary hover:bg-primary/90">
                       Подробнее
                     </Button>
                   </div>
@@ -181,15 +193,6 @@ export default function Index() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
-                      <Icon name="Phone" size={24} className="text-white" />
-                    </div>
-                    <div>
-                      <p className="text-sm text-muted-foreground">Телефон</p>
-                      <p className="text-xl font-bold">+7 (495) 123-45-67</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
                       <Icon name="Mail" size={24} className="text-white" />
                     </div>
@@ -242,6 +245,26 @@ export default function Index() {
           </p>
         </div>
       </footer>
+
+      <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
+        <DialogContent className="max-w-2xl">
+          <DialogHeader>
+            <DialogTitle className="text-4xl font-bold text-center text-primary">
+              Кчау! ⚡
+            </DialogTitle>
+            <DialogDescription className="text-center text-lg">
+              Секретный рецепт успеха
+            </DialogDescription>
+          </DialogHeader>
+          <div className="mt-4">
+            <img
+              src="https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/be8a4a75-e5f7-4446-9778-61c7a7f63b6b.jpg"
+              alt="Рецепт варки сапогов"
+              className="w-full rounded-lg"
+            />
+          </div>
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

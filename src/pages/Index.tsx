@@ -8,29 +8,29 @@ const carModels = [
     name: 'ВАЗ-2101 "Копейка"',
     year: '1970-1988',
     description: 'Первая модель легендарного завода. Надёжный классический седан, покоривший миллионы сердец.',
-    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/9715476e-cc96-46b9-a095-e6f4556b63b0.jpg',
-    price: 'от 150 000 ₽',
+    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/c2c4da9b-3f65-47f2-a47f-3405ca962844.jpg',
+    price: 'от 1 500 000 ₽',
   },
   {
     name: 'ВАЗ-2106',
     year: '1976-2006',
     description: 'Улучшенная "шестёрка" с более мощным двигателем. Символ советского автопрома.',
-    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/8649d052-9027-43c3-93d9-d69568cd59d6.jpg',
-    price: 'от 200 000 ₽',
+    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/e26d70bf-513c-4f81-9cea-512f35048453.jpg',
+    price: 'от 2 000 000 ₽',
   },
   {
-    name: 'ВАЗ-2103 "Тройка"',
-    year: '1972-1984',
-    description: 'Комфортная модель с богатой комплектацией. Идеальный баланс цены и качества.',
-    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/0f77a778-75e1-46db-9107-ae587db6da3c.jpg',
-    price: 'от 180 000 ₽',
+    name: 'Молния Маккуин',
+    year: '2006',
+    description: 'Легендарный гоночный автомобиль. Скорость, стиль и харизма в одном корпусе!',
+    image: 'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/61937579-f75e-47fd-a69c-fda80ec64e36.jpg',
+    price: 'от 5 000 000 ₽',
   },
 ];
 
 const galleryImages = [
-  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/9715476e-cc96-46b9-a095-e6f4556b63b0.jpg',
-  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/8649d052-9027-43c3-93d9-d69568cd59d6.jpg',
-  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/0f77a778-75e1-46db-9107-ae587db6da3c.jpg',
+  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/c2c4da9b-3f65-47f2-a47f-3405ca962844.jpg',
+  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/e26d70bf-513c-4f81-9cea-512f35048453.jpg',
+  'https://cdn.poehali.dev/projects/0c615ecf-f7c1-4d83-8ef6-d75fc8ea1781/files/61937579-f75e-47fd-a69c-fda80ec64e36.jpg',
 ];
 
 export default function Index() {
@@ -136,8 +136,8 @@ export default function Index() {
               </div>
               <div>
                 <Icon name="Award" size={48} className="mx-auto mb-4 text-secondary" />
-                <h3 className="text-3xl font-bold text-foreground mb-2">30 лет</h3>
-                <p className="text-muted-foreground">Опыт работы</p>
+                <h3 className="text-3xl font-bold text-foreground mb-2">2 года</h3>
+                <p className="text-muted-foreground">На рынке</p>
               </div>
               <div>
                 <Icon name="Users" size={48} className="mx-auto mb-4 text-primary" />
